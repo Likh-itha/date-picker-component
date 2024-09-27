@@ -1,0 +1,25 @@
+// components/DatePicker.js
+import React from 'react';
+import useStore from '../stores/useStore';
+
+const DatePicker = () => {
+  const { startDate, endDate, setStartDate, setEndDate } = useStore();
+
+  return (
+    <div>
+      <h2>Select Dates</h2>
+      <input
+        type="date"
+        value={startDate || ''}
+        onChange={(e) => setStartDate(e.target.value)}
+      />
+      <input
+        type="date"
+        value={endDate || ''}
+        onChange={(e) => setEndDate(e.target.value)}
+      />
+    </div>
+  );
+};
+
+export default DatePicker;
