@@ -1,0 +1,15 @@
+// stores/useStore.js
+import create from 'zustand';
+
+const useStore = create((set) => ({
+  startDate: null,
+  endDate: null,
+  recurrence: 'daily',
+  recurrenceInterval: 1,
+  setStartDate: (date) => set({ startDate: date }),
+  setEndDate: (date) => set({ endDate: date }),
+  setRecurrence: (recurrence) => set({ recurrence }),
+  setRecurrenceInterval: (interval) => set({ recurrenceInterval: interval }),
+}));
+
+export default useStore;
