@@ -1,0 +1,18 @@
+// pages/index.js
+import React from 'react';
+import RecurrenceOptions from '../components/RecurrenceOptions';
+import DatePicker from '../components/DatePicker';
+import CalendarPreview from '../components/CalendarPreview';
+
+const Home = () => {
+  return (
+    <div className="p-4">
+      <h1>Date Picker with Recurrence</h1>
+      <RecurrenceOptions />
+      <DatePicker />
+      <CalendarPreview />
+    </div>
+  );
+};
+
+export default Home;
