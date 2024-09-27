@@ -1,0 +1,27 @@
+// components/RecurrenceOptions.js
+import React from 'react';
+import useStore from '../stores/useStore';
+
+const RecurrenceOptions = () => {
+  const { recurrence, setRecurrence, recurrenceInterval, setRecurrenceInterval } = useStore();
+
+  return (
+    <div>
+      <h2>Recurrence Options</h2>
+      <select value={recurrence} onChange={(e) => setRecurrence(e.target.value)}>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="yearly">Yearly</option>
+      </select>
+      <input
+        type="number"
+        value={recurrenceInterval}
+        onChange={(e) => setRecurrenceInterval(Number(e.target.value))}
+        min="1"
+      />
+    </div>
+  );
+};
+
+export default RecurrenceOptions;
