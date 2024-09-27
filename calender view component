@@ -1,0 +1,18 @@
+// components/CalendarPreview.js
+import React from 'react';
+import useStore from '../stores/useStore';
+
+const CalendarPreview = () => {
+  const { startDate, endDate, recurrence, recurrenceInterval } = useStore();
+  // Logic to calculate recurring dates goes here.
+
+  return (
+    <div>
+      <h2>Calendar Preview</h2>
+      {/* Render a mini calendar with the selected recurring dates */}
+      <div>{/* Calendar visualization */}</div>
+    </div>
+  );
+};
+
+export default CalendarPreview;
